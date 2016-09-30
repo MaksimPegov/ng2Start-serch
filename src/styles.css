@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+input{
+    padding: 4px;
+    margin: 7px;
+    width: 300px
+}
+.contaner{
+    width:100%;
+}
+
+.search{
+    position: relative;
+    margin: auto;
+    display: table;
+    margin-top: 350px;
+}    
+
+.glyphicon{
+    font-size: x-large;
+    color: #666;   
+    transition: all 1s;  
+}
+
+.glyphicon:hover{
+    color: #5593b9;
+    transform: rotate(90deg);
+}
+
+button{
+    padding: 1px;
+    width: 50px;
+    padding-top: 3px;
+    top: -1px;
+    position: relative;
+}

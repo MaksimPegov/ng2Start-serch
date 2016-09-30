@@ -1,12 +1,27 @@
 import './polyfills.ts';
-
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { enableProdMode } from '@angular/core';
 import { environment } from './environments/environment';
-import { AppModule } from './app/';
+import {Component} from "@angular/core";
+import {NgModule} from "@angular/core";
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import {BrowserModule} from "@angular/platform-browser";
+import {FindingBox} from "./finding-box.component";
 
-if (environment.production) {
-  enableProdMode();
+var configObject = {
+    selector: 'app',
+    template: `<finding-box placeholder='ti cusok govna'></finding-box>`
+}
+@Component(configObject)
+export class App {
+
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+@NgModule({
+    declarations:[App,FindingBox],
+    imports:[BrowserModule],
+    bootstrap: [App]
+})
+export class MyModule{
+
+}
+
+platformBrowserDynamic().bootstrapModule(MyModule);
